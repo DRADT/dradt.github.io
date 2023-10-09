@@ -2,14 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estilos.css" />
-    <title>Edit Text</title>
-  
-</head>
-  <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKES1G77P3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -21,6 +14,13 @@
 
         gtag("config", "G-KKES1G77P3");
     </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Edit Text</title>
+</head>
+
 <body>
     <div class="titulo">
         <p>Edit Text</p>
@@ -41,9 +41,18 @@
         <p class="text_o">Installation for 64 bits for windows</p>
         <a href="	
          https://www.mediafire.com/file/i1wfaa6of8cmmgk/setup.exe/file
-        " class="btn btn-4" onclick="gtag('event', 'descarga', { 'event_category': 'archivo', 'event_label': 'nombre-del-archivo.pdf' });">download</a
+        " class="btn btn-4" id="butoon">download</a
       >
     </div>
+    <script>
+        document.getElementById('butoon').addEventListener('click', function() {
+          // Envia un evento personalizado a Google Analytics cuando se hace clic en el botón
+          gtag('event', 'clic_en_boton', {
+            'event_category': 'Botones',
+            'event_label': 'Mi Botón',
+          });
+        });
+      </script>
     <p style="font-family: 'Courier New', Courier, monospace">
       send us a message to:
     </p>
